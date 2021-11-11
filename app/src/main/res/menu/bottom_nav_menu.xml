@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/pictures"
+        android:title="Pictures"
+       />
+    <item android:id="@+id/albums"
+        android:title="Albums"
+       />
+    <item android:id="@+id/stories"
+        android:title="Stories"
+        />
+    <item android:id="@+id/shared"
+        android:title="Shared"
+        />
+</menu>

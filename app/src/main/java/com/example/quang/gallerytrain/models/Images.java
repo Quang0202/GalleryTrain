@@ -4,14 +4,31 @@ public class Images {
     private String imageName;
     private String imagePath;
     private  String imageSize;
-    private  String imageUri;
+    private long timeTamp;
+    private String address;
+
+    public long getTimeTamp() {
+        return timeTamp;
+    }
+
+    public void setTimeTamp(long timeTamp) {
+        this.timeTamp = timeTamp;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     private Boolean selected = false;
     public Images(){}
     public Images(String imageName, String imagePath, String imageSize, String imageUri){
         this.imageName=imageName;
         this.imagePath=imagePath;
         this.imageSize=imageSize;
-        this.imageUri=imageUri;
     }
 
     public String getImageName() {
@@ -36,14 +53,6 @@ public class Images {
 
     public void setImageSize(String imageSize) {
         this.imageSize = imageSize;
-    }
-
-    public String getImageUri() {
-        return imageUri;
-    }
-
-    public void setImageUri(String imageUri) {
-        this.imageUri = imageUri;
     }
 
     public Boolean getSelected() {

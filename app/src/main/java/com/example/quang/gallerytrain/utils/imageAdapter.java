@@ -37,10 +37,12 @@ public class imageAdapter extends RecyclerView.Adapter<PicHolder> {
     @Override
     public void onBindViewHolder(@NonNull final PicHolder holder, final int position) {
         final Images image = pictureList.get(position);
+
         Glide.with(pictureContx)
-                .load(image.getImageUri())
+                .load(image.getImagePath())
                 .apply(new RequestOptions().centerCrop())
                 .into(holder.picture);
+
         setTransitionName(holder.picture, String.valueOf(position) + "_image");
         holder.picture.setOnClickListener(new View.OnClickListener() {
             @Override
