@@ -51,9 +51,9 @@ public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.View
         Groups group= groups.get(position);
         holder.mlableDay.setText(group.getDays());
         holder.mlableMonth.setText(group.getMonth());
-        //LinearLayoutManager layoutManager= new LinearLayoutManager(holder.imageList.getContext(),LinearLayoutManager.HORIZONTAL,false);
+        LinearLayoutManager layoutManager= new LinearLayoutManager(holder.imageList.getContext(),LinearLayoutManager.HORIZONTAL,false);
         imageAdapter image= new imageAdapter(group.getImages(),mContext,picListerner);
-        //holder.imageList.setLayoutManager(layoutManager);
+        holder.imageList.setLayoutManager(layoutManager);
         holder.imageList.addItemDecoration(new MarginDecoration(mContext));
         holder.imageList.hasFixedSize();
         holder.imageList.setAdapter(image);
