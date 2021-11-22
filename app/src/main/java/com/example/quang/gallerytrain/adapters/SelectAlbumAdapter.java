@@ -70,7 +70,7 @@ public class SelectAlbumAdapter  extends  RecyclerView.Adapter<SelectAlbumAdapte
                 final File forder = new File(album.getPath());
                 final File imageFile = new File(image.getImagePath());
                 AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-                builder.setTitle("Creating album");
+                builder.setTitle("Adding album");
                 String[] selection = {"Move", "Copy"};
                 builder.setItems(selection, new DialogInterface.OnClickListener() {
                     @Override
