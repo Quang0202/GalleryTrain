@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.FragmentPictures"
-    android:id="@+id/container_image">
+    tools:context=".activitys.CreateAlbum"
+    android:id="@+id/displayContainer">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,43 +14,48 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/head"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             app:cardBackgroundColor="@color/white">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="10dp"
+                android:id="@+id/close"
+                android:src="@drawable/close"
+                />
+
 
             <TextView
+                android:id="@+id/foldername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|start"
-                android:text="Pictures"
+                android:text="Select Images"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="10dp" />
-            <ImageButton
-                android:id="@+id/list_by"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/menu"
-                android:tint="@color/black" />
-
-
+                android:layout_marginStart="50dp" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/check"
+                android:src="@drawable/check"
+                android:alpha="0.5"
+                />
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.recyclerview.widget.RecyclerView
+        <com.example.quang.gallerytrain.utils.AutoFitRecyclerView
             android:layout_below="@id/head"
             android:id="@+id/recycler"
-            android:layout_marginLeft="2dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:background="#FFFFFF">
-        </androidx.recyclerview.widget.RecyclerView>
+            android:background="@color/white"
+            android:columnWidth="@dimen/picture_column_width">
+        </com.example.quang.gallerytrain.utils.AutoFitRecyclerView>
 
     </RelativeLayout>
 

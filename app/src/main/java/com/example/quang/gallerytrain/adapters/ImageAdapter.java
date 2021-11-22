@@ -1,4 +1,4 @@
-package com.example.quang.gallerytrain.utils;
+package com.example.quang.gallerytrain.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,16 +12,17 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.quang.gallerytrain.models.Images;
 import com.example.quang.gallerytrain.R;
+import com.example.quang.gallerytrain.utils.itemClickListener;
 
 import java.util.ArrayList;
 
 import static androidx.core.view.ViewCompat.setTransitionName;
 
-public class imageAdapter extends RecyclerView.Adapter<PicHolder> {
+public class ImageAdapter extends RecyclerView.Adapter<PicHolder> {
     private ArrayList<Images> pictureList;
     private Context pictureContx;
     private final itemClickListener picListerner;
-    public imageAdapter(ArrayList<Images> pictureList, Context pictureContx,itemClickListener picListerner) {
+    public ImageAdapter(ArrayList<Images> pictureList, Context pictureContx, itemClickListener picListerner) {
         this.pictureList = pictureList;
         this.pictureContx = pictureContx;
         this.picListerner = picListerner;

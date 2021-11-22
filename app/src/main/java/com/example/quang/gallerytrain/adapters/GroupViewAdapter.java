@@ -1,27 +1,18 @@
-package com.example.quang.gallerytrain.utils;
+package com.example.quang.gallerytrain.adapters;
 
 import android.content.Context;
-import android.os.Build;
-import android.transition.Fade;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.quang.gallerytrain.R;
-import com.example.quang.gallerytrain.activitys.MainActivity;
-import com.example.quang.gallerytrain.fragment.Fragment_Image_Browser;
 import com.example.quang.gallerytrain.models.Groups;
-import com.example.quang.gallerytrain.models.Images;
+import com.example.quang.gallerytrain.utils.MarginDecoration;
+import com.example.quang.gallerytrain.utils.itemClickListener;
 
 import java.util.ArrayList;
 
@@ -51,9 +42,9 @@ public class GroupViewAdapter extends RecyclerView.Adapter<GroupViewAdapter.View
         Groups group= groups.get(position);
         holder.mlableDay.setText(group.getDays());
         holder.mlableMonth.setText(group.getMonth());
-        LinearLayoutManager layoutManager= new LinearLayoutManager(holder.imageList.getContext(),LinearLayoutManager.HORIZONTAL,false);
-        imageAdapter image= new imageAdapter(group.getImages(),mContext,picListerner);
-        holder.imageList.setLayoutManager(layoutManager);
+        //LinearLayoutManager layoutManager= new LinearLayoutManager(holder.imageList.getContext(),LinearLayoutManager.HORIZONTAL,false);
+        ImageAdapter image= new ImageAdapter(group.getImages(),mContext,picListerner);
+        //holder.imageList.setLayoutManager(layoutManager);
         holder.imageList.addItemDecoration(new MarginDecoration(mContext));
         holder.imageList.hasFixedSize();
         holder.imageList.setAdapter(image);

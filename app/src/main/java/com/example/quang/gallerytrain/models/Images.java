@@ -1,12 +1,14 @@
 package com.example.quang.gallerytrain.models;
 
-public class Images {
+import java.io.Serializable;
+
+public class Images implements Serializable {
     private String imageName;
     private String imagePath;
     private  String imageSize;
     private long timeTamp;
     private String address;
-
+    private Boolean selected = false;
     public long getTimeTamp() {
         return timeTamp;
     }
@@ -23,7 +25,6 @@ public class Images {
         this.address = address;
     }
 
-    private Boolean selected = false;
     public Images(){}
     public Images(String imageName, String imagePath, String imageSize, String imageUri){
         this.imageName=imageName;

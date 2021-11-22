@@ -12,13 +12,12 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
+
 import com.example.quang.gallerytrain.R;
-import com.example.quang.gallerytrain.fragment.Fragment_Albums;
-import com.example.quang.gallerytrain.fragment.Fragment_Pictures;
-import com.example.quang.gallerytrain.fragment.Fragment_Shared;
-import com.example.quang.gallerytrain.fragment.Fragment_Stories;
+import com.example.quang.gallerytrain.fragment.FragmentAlbums;
+import com.example.quang.gallerytrain.fragment.FragmentPictures;
+import com.example.quang.gallerytrain.fragment.FragmentShared;
+import com.example.quang.gallerytrain.fragment.FragmentStories;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -39,13 +38,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.pictures);
-        changeStatusBarColor();
+       // changeStatusBarColor();
 
     }
-    Fragment_Pictures fragment_pictures= new Fragment_Pictures();
-    Fragment_Albums fragment_albums = new Fragment_Albums();
-    Fragment_Stories fragment_stories = new Fragment_Stories();
-    Fragment_Shared fragment_shared=new Fragment_Shared();
+    FragmentPictures fragment_pictures= new FragmentPictures();
+    FragmentAlbums fragment_albums = new FragmentAlbums();
+    FragmentStories fragment_stories = new FragmentStories();
+    FragmentShared fragment_shared=new FragmentShared();
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
@@ -67,15 +66,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
         return false;
     }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void changeStatusBarColor()
-    {
-        Window window = this.getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(getApplicationContext(),R.color.black));
-
-    }
+//    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//    private void changeStatusBarColor()
+//    {
+//        Window window = this.getWindow();
+//        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//        window.setStatusBarColor(ContextCompat.getColor(getApplicationContext(),R.color.black));
+//
+//    }
     public static Context getContextOfApplication()
     {
         return contextOfApplication;

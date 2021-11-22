@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.FragmentPictures"
-    android:id="@+id/container_image">
+    tools:context=".activitys.ShowImagesAlbum"
+    android:id="@+id/displayContainer">
 
-    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,37 +14,32 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/head"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             app:cardBackgroundColor="@color/white">
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|start"
-                android:text="Pictures"
-                android:textColor="@color/black"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:layout_marginStart="10dp" />
-            <ImageButton
-                android:id="@+id/list_by"
+                android:layout_marginStart="20dp"
+                android:id="@+id/back"
+                android:src="@drawable/left_arrow"
+                />
+            <TextView
+                android:id="@+id/foldername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end|bottom"
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/menu"
-                android:tint="@color/black" />
-
-
+                android:layout_gravity="center|start"
+                android:text="@string/folderName"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="60dp" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_below="@id/head"
-            android:id="@+id/recycler"
+            android:id="@+id/imageRecycle"
             android:layout_marginLeft="2dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

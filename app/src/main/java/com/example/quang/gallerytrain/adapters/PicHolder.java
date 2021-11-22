@@ -1,4 +1,4 @@
-package com.example.quang.gallerytrain.utils;
+package com.example.quang.gallerytrain.adapters;
 
 import android.view.View;
 import android.widget.ImageView;

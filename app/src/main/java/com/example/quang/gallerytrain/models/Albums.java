@@ -1,10 +1,12 @@
 package com.example.quang.gallerytrain.models;
 
+
 public class Albums {
-    private  String path;
+    private  String path="";
     private  String albumName;
     private int numberOfPics = 0;
     private String firstPic;
+
     public Albums(){}
 
     public Albums(String path, String albumName){

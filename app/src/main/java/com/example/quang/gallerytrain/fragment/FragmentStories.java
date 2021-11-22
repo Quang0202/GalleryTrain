@@ -14,16 +14,16 @@ import com.example.quang.gallerytrain.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link Fragment_Stories.OnFragmentInteractionListener} interface
+ * {@link FragmentStories.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link Fragment_Stories#newInstance} factory method to
+ * Use the {@link FragmentStories#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Fragment_Stories extends Fragment {
+public class FragmentStories extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public Fragment_Stories() {
+    public FragmentStories() {
         // Required empty public constructor
     }
 
